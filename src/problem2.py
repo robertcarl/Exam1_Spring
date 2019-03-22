@@ -59,8 +59,56 @@ def test_problem2():
     print('Test case 1 Actual: ')
     problem3(string_of_characters)
     print('*********************************************')
-    # TODO: 2. Write at least three reasonable test cases below.
+    # DONE: 2. Write at least three reasonable test cases below.
     #         Three excellent test cases are worth 10 points
+
+    print('*********************************************')
+    print('Test case 2 Expected: ')
+    print('*********************************************')
+    string_of_characters = 'l2e8v8e2l'
+    print('String entered: ', string_of_characters)
+    print('Length of string: ', 9)
+    print('Number of alphabetic characters: ', 5)
+    print('Number of digits: ', 4)
+    print('Reversed string is: l2e8v8e2l')
+    print('The user entered a palindrome')
+    print()
+    print('*********************************************')
+    print('Test case 2 Actual: ')
+    problem3(string_of_characters)
+    print('*********************************************')
+
+    print('*********************************************')
+    print('Test case 3 Expected: ')
+    print('*********************************************')
+    string_of_characters = 'yess88iree'
+    print('String entered: ', string_of_characters)
+    print('Length of string: ', 10)
+    print('Number of alphabetic characters: ', 8)
+    print('Number of digits: ', 2)
+    print('Reversed string is: eeri88ssey')
+    print('The user entered a normal string')
+    print()
+    print('*********************************************')
+    print('Test case 3 Actual: ')
+    problem3(string_of_characters)
+    print('*********************************************')
+
+    print('*********************************************')
+    print('Test case 4 Expected: ')
+    print('*********************************************')
+    string_of_characters = 'racecar'
+    print('String entered: ', string_of_characters)
+    print('Length of string: ', 7)
+    print('Number of alphabetic characters: ', 7)
+    print('Number of digits: ', 0)
+    print('Reversed string is: racecar')
+    print('The user entered a palindrome')
+    print()
+    print('*********************************************')
+    print('Test case 4 Actual: ')
+    problem3(string_of_characters)
+    print('*********************************************')
 
 
 def problem3(string_of_characters):
@@ -121,7 +169,7 @@ def problem3(string_of_characters):
        Reversed string: b21a
        The user entered a normal string
     """
-    # TODO: 3. Implement this function.
+    # DONE: 3. Implement this function.
     # To implement this function, you need to reverse a string.
     # If you write your own method to reverse a string and solve
     # the entire problem, you will get 25 points. If you use the
@@ -131,6 +179,23 @@ def problem3(string_of_characters):
 # If this module is running at the top level (as opposed to being
 # imported by another module), then call the 'main' function.
 # -----------------------------------------------------------------------
+    d = 0
+    r = ""
+    l = 0
+    for k in range(len(string_of_characters) - 1, -1, -1):
+        if string_of_characters[k].isdigit():
+            d = d + 1
+        else:
+            l = l + 1
+        r = r + string_of_characters[k]
+    print("Length of string: ", len(string_of_characters))
+    print("Number of alphabetic characters: ", str(l))
+    print("Number of digits: ", str(d))
+    print("Reversed string: ", r)
+    if r == string_of_characters:
+        print("The user entered a palindrome")
+    else:
+        print("The user entered a normal string")
 
 
 if __name__ == '__main__':
